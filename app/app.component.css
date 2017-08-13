@@ -1,0 +1,33 @@
+body{
+    padding: 2em 23em;
+    background-color: pink;
+}
+
+ button{
+    margin:1%;
+    text-align: center;
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    width:100px;
+    height:40px;
+    cursor: pointer;
+    border:none;
+} 
+
+#nav{
+    background-color: gold;
+    border-radius: 10px;
+}
+
+#right{
+        text-align: right;
+
+}
+    h1{
+        float: left;
+        color: peru;
+        font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+
+    }

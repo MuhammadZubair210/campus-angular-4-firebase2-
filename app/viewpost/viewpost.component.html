@@ -1,0 +1,28 @@
+<!-- <p>
+  viewpost works!
+</p>
+ <table *ngFor="let st of viewpost">
+  <tr>
+    <td>{{st.post}}</td>
+    <td>{{st.description}}</td>
+  </tr>
+</table>  -->
+
+<table class="table table-sm">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>NAME</th>
+      <th>services</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let st of viewpost; let i = index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{st.post}}</td>
+      <td>{{st.description}}</td>
+   
+    </tr>
+  </tbody>
+</table>

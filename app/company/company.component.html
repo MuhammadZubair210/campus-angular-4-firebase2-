@@ -1,0 +1,53 @@
+   <h1>
+  Add Company Data
+</h1>
+<button routerLink="/addpost">Add posts</button>
+<button routerLink="/viewpost">View posts</button>
+<button (click)="s()"></button>
+<div>
+  <form [formGroup]="form" (ngSubmit)="submitCD()">
+    <md-input-container>
+      <input mdInput type="text" placeholder="companyname" formControlName="companyname" required>
+    </md-input-container><br>
+    <md-input-container>
+      <input mdInput type="text" placeholder="mainservices" formControlName="mainservices" required>
+    </md-input-container><br>
+    <md-input-container>
+      <input mdInput type="address" placeholder="Address" formControlName="address" required>
+    </md-input-container><br>
+    <md-input-container>
+      <input mdInput type="number" placeholder="Program" formControlName="contact" required>
+    </md-input-container>
+    <br>
+    <button type="submit">register</button>
+  </form>
+</div>  
+   <button routerLink="/addpost">click</button>
+
+<hr>
+<h2>STUDENTS</h2>
+<table class="table table-sm">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>NAME</th>
+      <th>CGPA</th>
+      <th>Qualification</th>
+      <th>Program</th>
+      <th>Contact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let st of student | async; let i = index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{st.name}}</td>
+      <td>{{st.cgpa}}</td>
+      <td>{{st.qualification}}</td>
+      <td>{{st.program}}</td>
+      <td>{{st.contact}}</td>
+    </tr>
+  </tbody>
+</table>   
+
+
+

@@ -1,0 +1,33 @@
+<h1>
+    Register User
+</h1>
+<div>
+    <md-input-container>
+        <input mdInput placeholder="name" type="text" name="text" [(ngModel)]="name">
+    </md-input-container><br>
+    <md-input-container>
+        <input mdInput placeholder="Email" type="email" name="email" [(ngModel)]="email">
+    </md-input-container><br>
+    <md-input-container>
+        <input mdInput placeholder="Password" type="password" name="password" [(ngModel)]="password">
+    </md-input-container><br>
+    <md-radio-group [(ngModel)]="type">
+        <md-radio-button value="Student">Student</md-radio-button>
+        <md-radio-button value="Company">Company</md-radio-button>
+    </md-radio-group><br>
+    <button md-button (click)="signup()" [disabled]="!email || !password">Register</button>
+
+    <!-- <button (click)="signup()" [disabled]="!email || !password || !type">register</button> -->
+</div>
+
+
+
+
+
+<!-- <input type="text" placeholder="name" name="text" [(ngModel)]="name"><br>
+        <input type="text" placeholder="email" name="text" [(ngModel)]="email"><br>
+        <input type="password" placeholder="password" name="password" [(ngModel)]="password"><br>
+        <input type="radio" name="rad" value="student" [(ngModel)]="type">student
+        <input type="radio" name="rad" value="company" [(ngModel)]="type">company<br>
+        <input type="submit" name="submit" value="register" [disabled]="!email || !password || !type">
+         -->

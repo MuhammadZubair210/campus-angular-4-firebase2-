@@ -1,0 +1,114 @@
+<div id="company">
+
+  <h2>STUDENTS</h2>
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>NAME</th>
+        <th>CGPA</th>
+        <th>Qualification</th>
+        <th>Program</th>
+        <th>Contact</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let st of student | async; let i = index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{st.name}}</td>
+        <td>{{st.cgpa}}</td>
+        <td>{{st.qualification}}</td>
+        <td>{{st.program}}</td>
+        <td>{{st.contact}}</td>
+        <td><button type="button" class="btn btn-alert btn-sm center-block" data-target="#detailModal" data-toggle="modal" (click)="deleteValues(st.$key)">Remove</button></td>
+        <!-- <td><button type="button"  class="btn btn-success btn-sm center-block"  data-target="#detailModal" data-toggle="modal" (click)="showDetail(i)">Detail</button></td>   -->
+
+      </tr>
+    </tbody>
+
+  </table>
+</div>
+
+ 
+<!-- Model Start -->
+<!-- <div class="modal fade" id="detailModal" data-keyboard="false" data-backdrop="static" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Student Detail</h4>
+        <button class="close pull-right" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li><strong>Name: </strong>{{st.name}}</li>
+          <li><strong>GPA: </strong>{{st.cgpa}}</li>
+          <li><strong>Email: </strong>{{st.qualification}}</li>
+          <li><strong>PROGRAM: </strong>{{st.program}}</li>
+          <li><strong>Contact: </strong>{{st.contact}}</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-warning" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- -Model End -->
+
+<!-- 
+<div id="company">
+
+  <h2>Company</h2>
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>NAME</th>
+        <th>services</th>
+        <th>address</th>
+        <th>contact</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let st of company | async; let i = index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{st.companyname}}</td>
+        <td>{{st.mainservices}}</td>
+        <td>{{st.address}}</td>
+        <td>{{st.contact}}</td>
+        <td><button type="button" class="btn btn-success btn-danger center-block" data-target="#detailModal" data-toggle="modal"
+            (click)="deleteValue(st.$key)">Remove</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+ 
+
+<!-- 
+<div id="company">
+
+  <h2>Company</h2>
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>NAME</th>
+        <th>services</th>
+        <th>address</th>
+        <th>contact</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of ss | async; let i = index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{s.name}}</td>
+        <td>{{s.password}}</td>
+
+        <td>{{s.email}}</td>
+        <td>{{s.type}}</td>
+        <td><button type="button" class="btn btn-success btn-danger center-block" data-target="#detailModal" data-toggle="modal"
+            (click)="deleteValue(st.$key)">Remove</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->

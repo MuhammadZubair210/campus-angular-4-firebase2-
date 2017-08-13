@@ -1,0 +1,56 @@
+<h1>
+  Add StudentData
+</h1>
+<div>
+  <form [formGroup]="fm" (ngSubmit)="submit(fm.value)">
+    <md-input-container>
+
+      <input mdInput type="text" placeholder="Name" formControlName="name" required>
+    </md-input-container>
+    <md-input-container>
+
+      <input mdInput type="text" placeholder="Qualification" formControlName="qualification" required>
+    </md-input-container>
+    <md-input-container>
+
+      <input mdInput type="text" placeholder="CGPA" formControlName="cgpa" required>
+    </md-input-container>
+    <md-input-container>
+
+      <input mdInput type="text" placeholder="Program" formControlName="program" required>
+    </md-input-container>
+    <md-input-container>
+
+      <input mdInput type="number" placeholder="Contact Number" formControlName="contact" required>
+    </md-input-container>
+
+    <br>
+    <input type="submit" name="submit" value="submit">
+  </form>
+</div>
+
+
+
+<hr>
+<hr>
+<h2>Company</h2>
+<table class="table table-sm">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>NAME</th>
+      <th>services</th>
+      <th>address</th>
+      <th>contact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let st of company | async; let i = index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{st.companyname}}</td>
+      <td>{{st.mainservices}}</td>
+      <td>{{st.address}}</td>
+      <td>{{st.contact}}</td>
+    </tr>
+  </tbody>
+</table>
